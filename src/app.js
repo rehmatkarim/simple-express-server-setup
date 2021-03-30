@@ -1,14 +1,18 @@
 const path = require("path");
 const express = require("express");
+const hbs = require('hbs');
 
 const app = express();
 
 //define paths for express config
-const viewsPath = path.join(__dirname, "../templates");
+const viewsPath = path.join(__dirname, "../templates/views");
+const partialsPath = path.join(__dirname,"../templates/partials");
+
 
 //setup handlebars  engine and views location 
 app.set("view engine", "hbs");
 app.set("views", viewsPath);
+hbs.registerPartials(partialsPath);
 
 
 //setup static dir to serve
@@ -29,6 +33,7 @@ app.get("/help", (req, res) => {
   res.render("help", {
     message:
       "I am here to help you out if you have any query kindly contact me.",
+      title:'Help'
   });
 });
 app.get("/weather", (req, res) => {
