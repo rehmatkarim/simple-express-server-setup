@@ -2,4 +2,4 @@
 
 # To run the program just type 
 
-nodemon src/ap.js -e js,hbs
+#nodemon src/app.js -e js,hbs
