@@ -27,13 +27,15 @@ app.get("", (req, res) => {
 app.get("/about", (req, res) => {
   res.render("about", {
     title: "About",
+    name:'Rehmat Karim'
   });
 });
 app.get("/help", (req, res) => {
   res.render("help", {
     message:
       "I am here to help you out if you have any query kindly contact me.",
-      title:'Help'
+      title:'Help',
+      name:'Rehmat Karim'
   });
 });
 app.get("/weather", (req, res) => {
