@@ -14,7 +14,7 @@ const forcast = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        `its ${body.current.weather_descriptions}. The current temperature is ${body.current.temperature} degrees and there are ${body.current.precip}% chances of Rain.The humidity is ${body.current.humidity}%.`
+        `its ${body.current.weather_descriptions}. The current temperature is ${body.current.temperature} degress out and it feels like ${body.current.feelslike} degress out.The humidity is ${body.current.humidity}%.`
       );
     }
   });
