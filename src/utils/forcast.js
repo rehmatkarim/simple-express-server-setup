@@ -5,8 +5,7 @@ const forcast = (latitude, longitude, callback) => {
     "http://api.weatherstack.com/current?access_key=93f36cd80dc0ee8678c8b416bb2168be&query=" +
     latitude +
     "," +
-    longitude +
-    "&units=f";
+    longitude;
   request({ url, json: true }, (error, {body}) => {
     if (error) {
       callback("unable to connect the weather service..", undefined);
